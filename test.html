@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <body>
+<a id="prev" href="javascript:;"><</a>
+
+<a id="next" href="javascript:;">></a>
+<img id="img1" />
+<script type="text/javascript">
+window.onload = function(){
+	var aprev = document.getElementById("prev");
+	var anext = document.getElementById("next");
+	var b = ["imagesg/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"];
+	var oimg=document.getElementById("img1");
+	var num=0;
+	function start(){
+	oimg.src=b[num];
+}
+start();
+aprev.onclick = function(){
+	num--;
+	if(num==-1){
+		num==b.length-1;
+	}
+	start();
+}
+  aprev.onclick = function(){
+	num++;
+	if(num==b.length){
+		num==0;
+	}
+	start();
+}
+}
+</script>
+</body>
+</html>
